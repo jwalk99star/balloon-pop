@@ -2,6 +2,8 @@
 let startButton = document.getElementById('start-button')
 let inflateButton = document.getElementById('inflate-button')
 
+// #region GAME LOGIC AND DATA
+
 //DATA
 let clickCount = 0
 let height = 120
@@ -83,5 +85,27 @@ function stopGame(){
 
     stopClock()
     draw()
+}
+
+// #endregion
+
+let players = []
+
+function setPlayer(event){
+  event.preventDefault()
+  let form = event.target
+
+  let playerName = form.playerName.value
+
+  let currentPlayer = players.find(player => player.name == playerName)
+
+  if (!currentPlayer) {
+    currentPlayer = { name: playerName, topScore: 0 }
+  }
+
+
+  console.log(currentPlayer)
+
+  form.reset()
 }
 
