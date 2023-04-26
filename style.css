@@ -178,7 +178,6 @@ button:hover{
   border-color: var(--dark-lighten);
 }
 
-
 .d-flex{
   display: flex;
   align-items: center;
@@ -210,6 +209,10 @@ margin-top: 1.5em;
 margin-bottom: 1.5em;
 }
 
+
+.text-center{
+  text-align: center;
+}
 
 .hidden{
   display: none !important;
