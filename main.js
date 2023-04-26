@@ -1,3 +1,4 @@
+// @ts-nocheck
 // #region GAME LOGIC AND DATA
 
 //DATA
