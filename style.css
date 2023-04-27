@@ -1,7 +1,7 @@
 :root{
-  --primary: #f393fd;
-  --primary-lighten: #f8bcff;
-  --primary-darken: #af2cbc;
+  --primary: #00a8f3;
+  --primary-lighten: #2fb7f3;
+  --primary-darken: #007db4;
   --bg: #e0d9d9;
   --shadow: 2px 0 8px rgba(0, 0, 0, .3);
   --corners: 4px;
@@ -176,12 +176,12 @@ button:hover{
 }
 
 .btn-dark{
-  background-color: var(--dark-lighten);
-  border-color: var(--dark);
+  background-color: var(--primary);
+  border-color: var(--primary-dark);
 } 
 .btn-dark:hover{
-  background-color: var(--dark);
-  border-color: var(--dark-lighten);
+  background-color: var(--primary-darken);
+  border-color: var(--primary-dark);
 }
 
 .d-flex{
