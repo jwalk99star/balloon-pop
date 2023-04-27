@@ -1,5 +1,5 @@
+// @ts-nocheck
 // #region GAME LOGIC AND DATA
-
 //DATA
 let clickCount = 0
 let height = 120
@@ -106,6 +106,7 @@ function stopGame() {
 
   stopClock()
   draw()
+  drawScoreboard()
 }
 
 // #endregion
@@ -131,6 +132,7 @@ function setPlayer(event) {
   document.getElementById("game").classList.remove("hidden")
   form.classList.add("hidden")
   draw()
+  drawScoreboard()
 }
 
 function changePlayer() {
@@ -147,3 +149,25 @@ function loadPlayers() {
     players = playersData
   }
 }
+
+function drawScoreboard(){
+  let template = ""
+
+  players.sort((p1, p2) => p2.topScore - p1.topScore)
+
+  players.forEach(player => {
+    template += `
+    <div class="d-flex space-between">
+      <span>
+        <i class="fa fa-user"></i>
+        ${player.name}
+      </span>
+      <span>score: ${player.topScore}</span>
+    </div>
+    `
+  })
+
+  document.getElementById("players").innerHTML = template
+}
+
+drawScoreboard()
