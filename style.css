@@ -71,8 +71,8 @@ button:hover{
   width: 80px;
   background-color: var(--dark-lighten);
   position: absolute;
-  top: -80;
-  left: 50;
+  top: -80px;
+  left: 50px;
   display: flex;
   justify-content: center;
   transition: all .05s linear;
@@ -162,6 +162,7 @@ button:hover{
   padding: 1em;
   box-shadow: var(--shadow);
   border-radius: var(--corners);
+  user-select: none;
 }
 
 .shadow{
@@ -178,10 +179,14 @@ button:hover{
 .btn-dark{
   background-color: var(--primary);
   border-color: var(--primary-dark);
+  border: 1px solid var(--primary-darken);
+
 } 
 .btn-dark:hover{
   background-color: var(--primary-darken);
   border-color: var(--primary-dark);
+  border: 1px solid var(--primary-darken);
+
 }
 
 .d-flex{
